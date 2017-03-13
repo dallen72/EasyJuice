@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">InstantResume</string>
+    <string name="input_url_message">Enter URL</string>
+    <string name="save_url_message">Save</string>
+
+    <string name="missing_link_message">Error: Can\'t find URL</string>
+    <string name="option_text">Setup</string>
+    <string name="input_phone_num_message">Enter Phone #</string>
+    <string name="send_button_message">Send</string>
+</resources>

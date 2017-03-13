@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="integer_setup_page_num">0</integer>
+    <integer name="integer_main_page_num">1</integer>
+</resources>

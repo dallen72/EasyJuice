@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:drawable="@color/background_color"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:gravity="center"
+    tools:context="com.example.value.instantresume.MainActivity" >
+
+
+
+    <TextView android:id="@+id/linkedin_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/missing_link_message"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/phone_num_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:inputType="phone"
+            android:imeOptions="actionDone"
+            android:digits="0123456789+"
+            android:background="@color/colorAccent"
+            android:layout_margin="20dp"
+            android:padding="5dp"
+            android:hint="@string/input_phone_num_message" />
+
+        <Button
+            android:id="@+id/text_message_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone_num_input"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_shape"
+            android:text="@string/send_button_message" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
