@@ -1,4 +1,7 @@
-# InstantResume
+# EasyJuice
+
+## Description:
+  Save some text on your phone to send it via text later with a press of a button.
 
 ## Features:
 1.  A user is able to store a string of text locally to Android
