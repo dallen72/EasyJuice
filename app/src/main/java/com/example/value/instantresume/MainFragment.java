@@ -1,9 +1,13 @@
 package com.example.value.instantresume;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.telephony.SmsManager;
 import android.view.LayoutInflater;
@@ -87,8 +91,15 @@ public class MainFragment extends Fragment {
                 if ( ! validatePhoneNum(phone_input_num)) {
                     send_result_message = "Not a valid Phone Number";
                 } else {
-                    sendSMS(phone_input_num, url);
-                    send_result_message = "URL sent to " + phone_input_num;
+                    if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
+                        send_result_message = "Error Checking Permissions.";
+                    } else {
+                        String[] permissions = new String[]{Manifest.permission.SEND_SMS};
+                        requestPermissions(permissions, 1);
+
+                        sendSMS(phone_input_num, url);
+                        send_result_message = "URL sent to " + phone_input_num;
+                    }
                 }
                 Toast.makeText(getActivity(), send_result_message,Toast.LENGTH_SHORT).show();
             }
